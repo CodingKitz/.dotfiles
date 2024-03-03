@@ -16,16 +16,14 @@ in
 
   users.users.${user} = {
     isNormalUser = true;
-    extraGroups = [ ]; 
+    extraGroups = [ ];
     packages = with pkgs; [ ];
     initialPassword = "${user}";
   };
 
-  home-manager.users.${user} = import ../../home-manager/home.nix; 
-
-  environment.systemPackages = with pkgs; [ ];
-
+  home-manager.users.${user} = import ../../home-manager/home.nix;
+  environment.systemPackages = with pkgs; [];
   nixpkgs.config.allowUnfree = true;
-  system.stateVersion = "23.11"; 
+  system.stateVersion = "23.11";
 }
 

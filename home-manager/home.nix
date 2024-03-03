@@ -7,9 +7,7 @@ in
   home.homeDirectory = "/home/${user}";
   home.stateVersion = "23.11";
 
-  home.packages = with pkgs; [
-    home-manager
-  ];
+  home.packages = with pkgs; [];
 
   home.file.".config/home-manager/home.nix" = {
     source = ./home.nix;
@@ -19,5 +17,6 @@ in
     neovim = { enable = true; };
   };
 
+  home.enableNixpkgsReleaseCheck = false;
   programs.home-manager.enable = true;
 }
