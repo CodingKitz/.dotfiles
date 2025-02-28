@@ -1,5 +1,8 @@
 return {
 	{
+		"github/copilot.vim"
+	},
+	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v4.x",
 		lazy = true,
@@ -18,6 +21,7 @@ return {
 		dependencies = {
 			{ "L3MON4D3/LuaSnip" },
 			{ "hrsh7th/cmp-path" },
+			{ "f3fora/cmp-spell" },
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
@@ -33,6 +37,7 @@ return {
 				},
 				sources = {
 					{ name = "nvim_lsp" },
+					{ name = "spell"},
 					{ name = "path" },
 				},
 				mapping = cmp.mapping.preset.insert({
@@ -78,6 +83,11 @@ return {
 				vim.keymap.set("n", "<leader>vr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 				vim.keymap.set({ "n", "x" }, "gf", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
 				vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+				
+				-- Diagnostic Commands (search diagnostic with Telescope keymap)
+				-- <C-W>d 
+				-- [d previous
+				-- ]d next
 			end
 
 			lsp_zero.extend_lspconfig({

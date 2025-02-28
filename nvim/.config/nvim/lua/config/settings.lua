@@ -1,4 +1,5 @@
 -- Settings for nvim 
+vim.cmd[[set noswapfile]]
 vim.cmd[[set number]]
 vim.cmd[[set relativenumber]]
 
