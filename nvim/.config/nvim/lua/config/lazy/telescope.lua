@@ -7,10 +7,11 @@ return {
 			defaults = {
 				file_ignore_patterns = {
 					"node_modules",
-					"build"
+					"build",
+					"__pycache__",
+					"env"
 				}
 			}
-
 		})
 
 
@@ -19,6 +20,8 @@ return {
 		vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 		vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 		vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-		vim.keymap.set('n', '<leader>fd', builtin.lsp_references, {})
+
+		-- Use telescope LSP references instead of the default LSP references 
+		vim.keymap.set('n', 'grr', builtin.lsp_references, {})
 	end
 }

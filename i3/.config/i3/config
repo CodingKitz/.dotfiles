@@ -197,5 +197,5 @@ bar {
 	status_command i3status
 }
 
-exec --no-startup-id feh --bg-fill ~/.dotfiles/backgrounds/silhouette-couple-standing-cityscape-sunset-skyscraper-skyline-generative-ai.jpg
+exec --no-startup-id ~/.screenlayout/docked.sh && feh --bg-fill ~/.dotfiles/backgrounds/silhouette-couple-standing-cityscape-sunset-skyscraper-skyline-generative-ai.jpg
 exec --no-startup-id picom

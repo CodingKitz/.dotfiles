@@ -37,7 +37,7 @@ return {
 				},
 				sources = {
 					{ name = "nvim_lsp" },
-					{ name = "spell"},
+					{ name = "spell" },
 					{ name = "path" },
 				},
 				mapping = cmp.mapping.preset.insert({
@@ -78,14 +78,13 @@ return {
 				vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
 				vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
 				vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-				vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
 				vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 				vim.keymap.set("n", "<leader>vr", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
 				vim.keymap.set({ "n", "x" }, "gf", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
-				vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
-				
+				-- vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+
 				-- Diagnostic Commands (search diagnostic with Telescope keymap)
-				-- <C-W>d 
+				-- <C-W>d
 				-- [d previous
 				-- ]d next
 			end
