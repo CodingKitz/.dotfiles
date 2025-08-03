@@ -11,3 +11,7 @@ vim.cmd[[set softtabstop=4]]
 
 -- Column
 vim.cmd[[set colorcolumn=80]]
+
+-- Line wrapping
+vim.cmd[[set wrap]]
+vim.cmd[[set textwidth=80]]
